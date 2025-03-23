@@ -39,7 +39,9 @@ function setGame() { // setting the board (columns and rows)
 
 }
 
-function setTwo() {
+
+// A function that will randomly spawn a block with value of 2.
+function setTwo() {  
     if (!hasEmptyTile()) {
         return;
     }
@@ -84,7 +86,7 @@ function updateTile(tile, num) { // a function that will update the tiles number
     }
 }
 
-document.addEventListener('keyup', (e) => { // The keys to move tiles. keyup is a click, keydown is holding the key. e is an event
+document.addEventListener('keyup', (e) => { // The keys to move tiles. keyup is a click, keydown is holding the key. e is an event. It also updates the score
     if (e.code == "ArrowLeft") { // left key
         slideLeft();
         setTwo();
@@ -102,16 +104,16 @@ document.addEventListener('keyup', (e) => { // The keys to move tiles. keyup is 
         slideDown();
         setTwo();
     }
-    document.getElementById("score").innerText = score;
+    document.getElementById("score").innerText = score; // score refresher
 })
 
 function filterZero(row){
-    return row.filter(num => num != 0); //create new array of all nums != 0
+    return row.filter(num => num != 0); //create new array of all nums except 0
 }
 
-function slide(row) {
+function slide(row) {       // filters zeros in rows
     //[0, 2, 2, 2] 
-    row = filterZero(row); //[2, 2, 2]
+    row = filterZero(row); //[2, 2, 2] get rid of zeros
 
     // slide
     for (let i = 0; i < row.length-1; i++){
