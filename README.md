@@ -1,8 +1,9 @@
 # 2048-Game
 ---
 
+https://github.com/user-attachments/assets/74f5da88-e945-458f-a70d-fdf281d9219e
 
-![ezgif-5fa80306e7e517](https://github.com/user-attachments/assets/ec5e7cac-2cbf-4021-9b8f-ed521ac3dab8)
+
 
 
 
